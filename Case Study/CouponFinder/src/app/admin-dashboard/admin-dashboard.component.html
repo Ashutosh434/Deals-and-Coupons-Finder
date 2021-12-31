@@ -1,0 +1,266 @@
+<div class="row">
+
+  <a class="btn btn-#C6AD8F" href="#" role="button" style="width: 170px;">SignOut</a>
+  <div>
+    <div class="container">
+      <div class="row">
+        <span class="text-center text-bold"><h3>Welcome to Admin Dashboard</h3></span>
+
+
+
+<!-- for coupon list ------------------------------------------------------------------------------------->
+
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label class="col-form-label text-white text-bolder">Search : </label>
+          </div>
+          <div class="col-auto search-product">
+            <input [(ngModel)]="searchText" autocomplete="off" class="form-control" name="search"
+                   placeholder="search"
+                   type="text">
+          </div>
+          <div class="col-auto">
+            <span class="form-text text-white">
+              search by couponId, Provider, couponCode, Category, Description, & ExpiryDate
+            </span>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <div class="m-3">
+            <br>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-#D3D3D3 table-hover">
+              <thead>
+              <tr>
+                <th>couponId</th>
+                <th>Provider</th>
+                <th>couponCode</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Expiry Date</th>
+                <th>Actions</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let product of coupons | filter:searchText">
+                <td><span>{{product.couponId}}</span></td>
+                <td><span>{{product.provider}}</span></td>
+                <td><span>{{product.couponCode}}</span></td>
+                <td><span>{{product.category}}</span></td>
+                <td><span>{{product.description}}</span></td>
+                <td><span>{{product.expiryDate}}</span></td>
+                <td class="text-center">
+                  <button class ="btn btn-danger btn-xs" (click)="deleteCoupons(product.couponId)">Delete</button>
+                </td>
+
+
+              </tr>
+              </tbody>
+            </table>
+            <br>
+
+          </div>
+        </div>
+        <br>
+      </div>
+      <br>
+    </div>
+<!-- coupon list ends------------------------------------------------------------------------------------------------- -->
+
+
+<!-- for user list..................................................................................................... -->
+
+<td>
+<div class="text-center">
+  <div class="m-3">
+    <br>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-#D3D3D3 table-hover">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>UserName</th>
+        <th>Password</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let admin of users | filter:searchText">
+        <td><span>{{admin.id}}</span></td>
+        <td><span>{{admin.userName}}</span></td>
+        <td><span>{{admin.password}}</span></td>
+        <td><span>{{admin.email}}</span></td>
+        <td class="text-center">
+          <button class ="btn btn-danger btn-xs" (click)="deleteUser(admin.id)">Delete</button>
+        </td>
+
+      </tr>
+      </tbody>
+    </table>
+    <br>
+
+  </div>
+</div>
+
+</td>
+
+
+
+
+
+
+
+
+
+    <!-- Modal  for Add Coupon-->
+
+
+
+
+
+
+
+
+
+
+    <!-- <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="AddCouponModel"
+         tabindex="-1"> -->
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add</h5>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="formValue">
+              <div class="form-group">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">couponId</label>
+                  <input aria-describedby="emailHelp" class="form-control" formControlName="id" id="exampleInputEmail1"
+                         placeholder="Enter couponId (leave it empty)"  type="email" >
+                </div>
+<br>
+                <p><b>Required Fields</b></p>
+                <label for="exampleInputEmail1">Provider</label>
+                <input aria-describedby="emailHelp" class="form-control" formControlName="provider"
+                       id="exampleInputEmail1"
+                       placeholder="Enter provider"  type="email" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">couponCode</label>
+                <input aria-describedby="emailHelp" class="form-control" formControlName="couponCode" id="exampleInputEmail1"
+                       placeholder="Enter code" type="email" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Category</label>
+                <input aria-describedby="emailHelp" class="form-control" formControlName="category"
+                       id="exampleInputEmail1"
+                       placeholder="Enter Category" type="email" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Description</label>
+                <input aria-describedby="emailHelp" class="form-control" formControlName="description"
+                       id="exampleInputEmail1"
+                       placeholder="Enter Description" type="email" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Expiry Date</label>
+                <input aria-describedby="emailHelp" class="form-control" formControlName="expiryDate"
+                       id="exampleInputEmail1"
+                       placeholder="Enter expirydate" type="email" required>
+              </div>
+              <br>
+              <button (click)="addCoupon()" class="btn btn-primary" type="submit">Add<!-- Add --></button>
+              <!-- <button type="submit" class="btn btn-primary" data-dismiss="modal" (click)="updateCoupon()">Update</button> -->
+              <!-- Add -->
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+          </div>
+        </div>
+
+        <!-- End of the Add Coupon Modal -->
+
+        <div>
+
+
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update Coupons</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+              </div>
+              <div class="modal-body">
+                <form [formGroup]="formValue">
+                  <div class="form-group">
+                    <div class="form-group">
+                      <br>
+                <p><b>Required Fields</b></p>
+                      <label for="exampleInputEmail1">couponId</label>
+                      <input aria-describedby="emailHelp" class="form-control" formControlName="id"
+                             id="exampleInputEmail1"
+                             placeholder="Enter couponId " type="email" required>
+                    </div>
+                    <label for="exampleInputEmail1">Provider</label>
+                    <input aria-describedby="emailHelp" class="form-control" formControlName="provider"
+                           id="exampleInputEmail1"
+                           placeholder="Enter provider" type="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">couponCode</label>
+                    <input aria-describedby="emailHelp" class="form-control" formControlName="code"
+                           id="exampleInputEmail1"
+                           placeholder="Enter code" type="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Category</label>
+                    <input aria-describedby="emailHelp" class="form-control" formControlName="category"
+                           id="exampleInputEmail1"
+                           placeholder="Enter Category" type="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Description</label>
+                    <input aria-describedby="emailHelp" class="form-control" formControlName="description"
+                           id="exampleInputEmail1"
+                           placeholder="Enter Description" type="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Expiry Date</label>
+                    <input aria-describedby="emailHelp" class="form-control" formControlName="expiryDate"
+                           id="exampleInputEmail1"
+                           placeholder="Enter expirydate" type="email" required>
+                  </div>
+                  <br>
+                  <button (click)="updateCoupon()" class="btn btn-primary" type="submit">Update<!-- Add --></button>
+                  <!-- <button type="submit" class="btn btn-primary" data-dismiss="modal" (click)="updateCoupon()">Update</button> -->
+
+
+
+                </form>
+
+
+
+
+
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Update -->
+
+
+
+
+
+    <!-- </div> -->
+  </div>
+</div>
+
