@@ -93,3 +93,5 @@ header.masthead .intro-text .intro-heading{
 .footer-element{
   background-color: #C6AD8F;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -29,7 +29,7 @@ export class UserService {
 // ...........................for user authentication...........................
 
 getAuth(credential:any){
-  return this.http.post("http://localhost:8090/user/authenticate",credential);
+  return this.http.post("http://localhost:8090/user/authenticate",credential,{responseType:'text' as 'json'});
 }
 // for user log in
  //for login user

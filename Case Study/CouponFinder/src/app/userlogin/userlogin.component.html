@@ -1,27 +1,32 @@
-<div class="bootstrap-wrapper ">
+<div class="bootstrap-wrapper">
   <div class="container">
-      <div class="row ">
-          <div class="col-md-4 offset-md-4 text-center">
-              <h1 class="head2">User Login</h1>
-                  <form (ngSubmit)="onSubmit()" >
-                    <form class="form-signin" appearance="outline" style="width: 100%;">
-                      <label class="form-signin input"><b>Enter Username</b></label>
-                      <input type="text" matInput required  name="t4" placeholder="Email Here" [(ngModel)]="credential.userName" autocomplete="false">
-                    </form>
+    <div class="row">
+      <div class="col-md-4 offset-md-4 text-center">
+        <h1 class="head2">User Login</h1>
+        <form (ngSubmit)="onSubmit()">
+          <form class="form-signin" appearance="outline" style="width: 100%">
+            <label class="form-signin input"><b>Enter Username</b></label>
+            <input type="text" matInput required name="t4" placeholder="Email Here" [(ngModel)]="credential.userName"
+              autocomplete="false" />
+          </form>
 
-                    <form class="form-signin input" appearance="outline" style="width: 100%;">
-                      <label class="lab"><b>Enter password</b> </label>
-                      <input type="password" matInput required  name="t5" placeholder="Password Here" [(ngModel)]="credential.password"  autocomplete="off" >
-                    </form>
-                    &nbsp;&nbsp;&nbsp;<button type="submit" mat-raised-button color="primary" style="width: 30%; padding-left: 10px">Login</button>&nbsp;&nbsp;
-                    <button type="reset" mat-raised-button color="accent" style="width: 30%;">Reset</button><br><br>
-                     <hr>
-                     <h4>Don't Have an Account</h4><a href="register">Click Here</a>
-                  </form>
-
-          </div>
+          <form class="form-signin input" appearance="outline" style="width: 100%">
+            <label class="form-signin input"><b>Password</b></label>
+            <input type="password" matInput required name="t5" placeholder="Password Here"
+              [(ngModel)]="credential.password" autocomplete="off" />
+          </form>
+          &nbsp;&nbsp;&nbsp;
+          <br>
+          <button type="submit" mat-raised-button color="primary"
+            style="width: 30%; padding-left: 10px">
+            Login</button>&nbsp;&nbsp;
+          <button type="reset" mat-raised-button color="accent" style="width: 30%">
+            Reset</button><br /><br />
+          <hr />
+          <h4>Don't Have an Account</h4>
+          <a href="/register">Click Here</a>
+        </form>
       </div>
+    </div>
   </div>
 </div>
-
-
