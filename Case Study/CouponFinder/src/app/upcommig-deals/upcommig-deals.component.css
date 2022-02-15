@@ -1,0 +1,701 @@
+
+
+.coupon-card {
+  padding: 0px;
+}
+.coupon-card-element {
+  background-color: #425664;
+  width: auto;
+}
+.coupon-element1 {
+  font-weight: bolder;
+  font-size: larger;
+  padding-top: 20px;
+}
+.coupon-element2 {
+  font-weight: 500;
+  font-size: medium;
+  padding-top: 20px;
+}
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fwall-background&psig=AOvVaw0EKjr2nroJQRG8GKRpvX3c&ust=1641199202703000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOib187VkvUCFQAAAAAdAAAAABAP");
+
+}
+user agent stylesheet div {
+  display: block;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+.footer .widget {
+  padding: 20px 0;
+}
+/* ==========================================
+    FOR DEMO PURPOSE
+  ========================================== */
+body {
+  /* background: #2a2e32; */
+  background-image: url("/CouponFinder/src/assets/images/hamburger.jpg");
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fwall-background&psig=AOvVaw0EKjr2nroJQRG8GKRpvX3c&ust=1641199202703000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOib187VkvUCFQAAAAAdAAAAABAP");
+
+}
+
+.text-small {
+  font-size: 12rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.form-control {
+  background: #212529;
+  border-color: #271e1e;
+}
+
+.form-control:focus {
+  background: #212529;
+}
+
+footer {
+  background: #1c344d;
+}
+
+/* ==========================================
+      CUSTOM UTILS CLASSES
+    ========================================== */
+body,
+html {
+  height: 100%;
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fwall-background&psig=AOvVaw0EKjr2nroJQRG8GKRpvX3c&ust=1641199202703000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOib187VkvUCFQAAAAAdAAAAABAP");
+}
+
+/* body {
+  background-color: #eee
+} */
+
+.t-products {
+  background-image: linear-gradient(
+    to right top,
+    #5629c0,
+    #5625cb,
+    #5620d5,
+    #551ae0,
+    #5412eb
+  );
+  color: #fff;
+  border-radius: 3px;
+}
+
+.processor {
+  background-color: #fff;
+  margin-top: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.brand {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.type {
+  background-color: #fff;
+}
+
+.product {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+}
+
+.about span {
+  color: #5629c0;
+  font-size: 16px;
+}
+
+.cart-button button {
+  font-size: 12px;
+  color: #fff;
+  background-color: #5629c0;
+  height: 38px;
+}
+
+.cart-button button:focus,
+button:active {
+  font-size: 12px;
+  color: #fff;
+  background-color: #5629c0;
+  box-shadow: none;
+}
+
+.product_fav i {
+  line-height: 40px;
+  color: #5629c0;
+  font-size: 15px;
+}
+
+.product_fav {
+  display: inline-block;
+  width: 36px;
+  height: 39px;
+  background: #ffffff;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 11%;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 3px;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.product_fav:hover {
+  background: #5629c0;
+}
+
+.product_fav:hover i {
+  color: #fff;
+}
+
+.about {
+  margin-top: 12px;
+}
+
+.off {
+  position: absolute;
+  left: 65%;
+  top: 6%;
+  width: 80px;
+  text-align: center;
+  height: 30px;
+  line-height: 8px;
+  border-radius: 5px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.demo {
+  background-color: rgb(5, 6, 7);
+}
+
+.pagination-outer {
+  text-align: center;
+}
+
+.pagination {
+  background-color: rgb(15, 12, 12);
+  border-radius: 25px !important;
+  overflow: hidden;
+  border: none !important;
+}
+
+a:focus,
+a:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.fa {
+  font-size: 11px;
+  vertical-align: middle !important;
+  color: black;
+}
+
+.pagination li.active .fa {
+  color: rgb(197, 107, 107) !important;
+}
+
+.pagination li a.page-link {
+  color: #505050;
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 17px 25px;
+  border: none;
+  transition: all 0.3s ease 0s;
+}
+
+.fa-home {
+  transform: scale(1.4, 1.4);
+}
+
+.pagination li:last-child a.page-link {
+  border: none;
+}
+
+.pagination li.active a.page-link,
+.pagination li a.page-link:hover,
+.pagination li.active a.page-link:hover {
+  background-color: transparent;
+}
+
+.pagination li a.page-link:after {
+  content: "";
+  background-color: #42a5f5 !important;
+  height: 100%;
+  width: 100%;
+  transform: scaleY(0);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.pagination li.active a.page-link:after,
+.pagination li a.page-link:hover:after,
+.pagination li.active a.page-link:hover:after {
+  transform: scaleY(1);
+  border-radius: 25px !important;
+}
+
+@media (max-width: 767px) {
+  .pagination li a.page-link {
+    padding: 11px 8px !important;
+  }
+
+  .fa {
+    font-size: 15px !important;
+  }
+
+  li a {
+    font-size: 15px !important;
+  }
+
+  .page-item + .page-item {
+    padding-left: 0 !important;
+  }
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  margin: 100px auto;
+  border-radius: 30px;
+  padding: 60%;
+}
+.container2 {
+  position: relative;
+  margin: 100px auto;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 60%;
+}
+
+#info {
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 50px;
+  font-size: 25px;
+  font-weight: 600;
+  background: #333;
+  color: #fff;
+  margin-bottom: 5%;
+}
+
+.btn:hover {
+  background: #32a0e9;
+}
+
+.offer {
+  font-size: 5rem;
+}
+
+#mobile-plane {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #image #plane {
+    width: 350px;
+    left: 20%;
+  }
+
+  .offer {
+    font-size: 3rem;
+  }
+
+  .btn {
+    font-size: 20px;
+  }
+
+  #mobile-plane {
+    display: none;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 767px) {
+  #mobile-plane {
+    display: none;
+  }
+
+  #image {
+    display: none;
+  }
+
+  #info {
+    border-radius: 10px;
+    padding: 180px 0 10px;
+    background: url("https://image.freepik.com/free-vector/modern-metropolis-night-cityscape-cartoon-vector_1441-2959.jpg")
+      no-repeat center center/cover;
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  margin: 0px;
+}
+
+.card {
+  width: 280px;
+  height: 520px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.card .backgroundEffect {
+  bottom: 0;
+  height: 0px;
+  width: 100%;
+}
+
+.card:hover {
+  color: #fff;
+  transform: scale(1.025);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+}
+
+.card:hover .backgroundEffect {
+  bottom: 0;
+  height: 320px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background: #1b9ce3;
+  animation: popBackground 0.3s ease-in;
+}
+
+.card .pic {
+  position: relative;
+}
+
+.card .pic img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card .date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 70px;
+  background-color: #1b9ce3;
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  transition: all ease;
+}
+
+.card .date .day {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card .date .month,
+.card .date .year {
+  font-size: 10px;
+}
+
+.card .text-muted {
+  font-size: 12px;
+}
+
+.card:hover .text-muted {
+  color: #fff !important;
+}
+
+.card .content {
+  padding: 0 20px;
+}
+
+.card .content .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  background-color: #1b9ce3;
+  border-radius: 25px;
+  font-size: 12px;
+  border: none;
+}
+
+.card:hover .content .btn {
+  background: #fff;
+  color: #1b9ce3;
+  box-shadow: #0000001a 0px 3px 5px;
+}
+
+.card .content .btn .fas {
+  font-size: 10px;
+  padding-left: 5px;
+}
+
+.card .content .foot .admin {
+  color: #1b9ce3;
+  font-size: 12px;
+}
+
+.card:hover .content .foot .admin {
+  color: #fff;
+}
+
+.card .content .foot .icon {
+  font-size: 12px;
+}
+
+.ratings i {
+  color: green;
+}
+
+.install span {
+  font-size: 20px;
+}
+
+.col-md-4 {
+  margin-top: 27px;
+}
+
+/* for container 3 */
+
+.container {
+  background-color: lightpink;
+  /* min-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 370px;
+  width: 200px;
+  background-color: darkred;
+  border-radius: 10px;
+  padding: 15px 10px;
+  position: relative;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: yellow;
+}
+
+.top-div {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.top-div .equal {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-div .spot {
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  left: 90px;
+  top: 5px;
+}
+
+.top-div .zero {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.medium-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.medium-div .new-drop {
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "Zen Antique Soft", serif;
+}
+
+.medium-div .nike {
+  font-size: 35px;
+  margin-top: 10px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.medium-div .off {
+  font-size: 35px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.medium-div .shop-now {
+  width: 100px;
+  height: 30px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 11px;
+  border-radius: 30px;
+}
+
+.medium-div .shop-now:hover {
+  background-color: green;
+}
+
+.social {
+  position: absolute;
+  bottom: 20px;
+  left: 26%;
+  display: flex;
+  flex-direction: row !important;
+}
+
+.social span {
+  border: 2px solid black;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #000;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.social span:nth-child(1) i {
+  transition: all 1s;
+}
+
+.social span:nth-child(2) i {
+  transition: all 1s;
+  transition-delay: 1s;
+}
+
+.social span:nth-child(3) i {
+  transition: all 1s;
+  transition-delay: 2s;
+}
+
+.card:hover .social span i {
+  transform: rotate(360deg);
+}
+
+.container4 {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-container1 {
+  width: 700px;
+  height: 400px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.image-container1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.image-container1 .content {
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  bottom: -140px;
+  left: 14px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 1s;
+  overflow: hidden;
+}
+.content1 p {
+  background: transparent;
+  color: #fff;
+}
+
+.image-container1:hover .content1 {
+  bottom: 14px;
+}
+
+

@@ -32,6 +32,7 @@ export class NavbarComponent implements OnInit {
 
   }
 
+// login for admin
 
   login(){
     this.userservice.getUser(this.loginForm.value.useremail).subscribe(

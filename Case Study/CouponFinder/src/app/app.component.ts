@@ -72,4 +72,8 @@ export class AppComponent {
      this.router.navigateByUrl('/register').then();
    }
 
+   toNews():void{
+     this.router.navigateByUrl("/news").then();
+   }
+
 }

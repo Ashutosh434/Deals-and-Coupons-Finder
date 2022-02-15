@@ -2,22 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AdminService } from '../admin.service';
 import { coupon } from '../coupon';
-import {Router} from "@angular/router";
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-coupon',
   templateUrl: './coupon.component.html',
-  styleUrls: ['./coupon.component.css']
+  styleUrls: ['./coupon.component.css'],
 })
 export class CouponComponent implements OnInit {
-
-  coupons: coupon[]= [];
-  formValue!:FormGroup;
-  userObj : coupon = new coupon("","","","","","");
+  coupons: coupon[] = [];
+  formValue!: FormGroup;
+  userObj: coupon = new coupon('', '', '', '', '', '');
   result: any;
   pcode: any;
-  edate:any
+  edate: any;
 
   searchText: any;
 
@@ -25,54 +23,51 @@ export class CouponComponent implements OnInit {
   // @ts-ignore
   public userDetails;
 
-  constructor(private adminService:AdminService, private fb:FormBuilder, private router: Router) { }
-
+  constructor(
+    private adminService: AdminService,
+    private fb: FormBuilder,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
 
-    //login
+    //login with GoogleLoginProvider
     const storage = localStorage.getItem('google_auth');
 
-    if (storage){
-      this.userDetails=JSON.parse(storage);
-    }else {
+    if (storage) {
+      this.userDetails = JSON.parse(storage);
+    } else {
       this.signOut();
     }
     //login
 
-    this.getCoupons()
+    this.getCoupons();
 
-
-    this.formValue=this.fb.group({
-      id: [""],
-      provider: [""],
-      code: [""],
-      category: [""],
-      description: [""],
-      expiryDate: [""],
-    })
-
-
-
-
+    this.formValue = this.fb.group({
+      id: [''],
+      provider: [''],
+      code: [''],
+      category: [''],
+      description: [''],
+      expiryDate: [''],
+    });
   }
-  updatepcode(data: any,date:any){
-    this.pcode=data;
-    this.edate=date
-
-
+  updatepcode(data: any, date: any) {
+    this.pcode = data;
+    this.edate = date;
   }
 
-  getCoupons(){
+  getCoupons() {
     console.log('Test Call');
-    this.adminService.getAllCoupons().subscribe(res=>{this.coupons=res});
+    this.adminService.getAllCoupons().subscribe((res) => {
+      this.coupons = res;
+    });
   }
 
-  //login
-  signOut():void{
+  //logout / signout
+
+  signOut(): void {
     localStorage.removeItem('google_auth');
     this.router.navigateByUrl('/header').then();
   }
-  //login
-
 }
